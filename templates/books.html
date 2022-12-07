@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Книги
+{% endblock %}
+
+{% block content %}
+<div>Книги:</div>
+<ul>
+    {% for book in data.books %}
+        <li><a href="{% url 'book_url' book.id %}">{{book.title}}</a></li>
+    {% empty %}
+        <li>Пустой список</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+

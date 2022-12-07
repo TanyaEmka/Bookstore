@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Книга № {{ data.book.id }}
+{% endblock %}
+
+{% block content %}
+Информация о заказе № {{ data.book.id }}
+<p>Название: {{ data.book.title }}</p>
+<p>Автор: {{ data.author.name}}</p>
+<p>Цена: {{ data.book.price }}</p>
+<p>Издание: {{ data.publisher.name }}</p>
+<p>Жанр: {{ data.genre.name }}</p>
+<p>Поджанр: {{ data.sub_genre.name }}</p>
+<p>Язык: {{ data.book.language }}</p>
+<p>Возратсное ограничение: {{ data.book.age_limit }}</p>
+<p>Рейтинг: {{ data.rating.value }}  Число оценивших: {{ data.rating.count }}</p>
+<p>Статус: {{ data.status.name }}</p>
+{% endblock %}
+
